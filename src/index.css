@@ -1,0 +1,442 @@
+
+
+button {
+  margin-right: 10px; 
+  color: black;
+}
+
+
+.navbar{
+
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2ecc71;
+  padding: 10px 20px;
+}
+
+
+.navbarr{
+
+ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2ecc71;
+  padding: 10px 20px;
+  
+}
+
+
+
+
+/* .order{
+
+
+        background: "white",
+     
+        borderRadius: "12px",
+        boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+        marginBottom: "20px",
+      
+} */
+
+
+
+
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+
+
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+.navbar-center {
+  display: flex;
+  gap: 20px;
+  margin-left: 930px;
+}
+
+.navbar-center a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login-btn {
+  padding: 6px 15px;
+  border: 1px solid black;
+  background: white;
+  border-radius: 6px;
+}
+
+.login-btn a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+.login_image {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+
+
+.bg{
+
+background-color: #E6F5E1;
+
+}
+
+
+.color{
+
+color: #922ec8;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar a{
+  text-decoration: none;
+}
+
+
+
+.container {
+    /* 1. Sets the layout method to Flexbox */
+    display: flex;
+
+    /* 2. Adds 20px of space between the two columns */
+    gap: 10px;
+}
+
+
+
+
+
+
+.feature {
+    /* 3. Makes both sections equal width and flexible */
+    flex: 1;
+
+    /* (Optional) Aligns the text within each section to the left */
+    text-align: left;
+}
+
+
+
+.hero-image img {
+
+  border-radius: 10px;
+   padding-left: 160px;
+
+
+  
+}
+
+
+
+
+
+
+.content{
+display: flex;
+flex-direction: row;
+background-color: #E6F5E1
+
+} 
+
+
+
+.heading{
+padding-top: 90px;
+}
+
+
+
+
+.footer{
+
+display: flex;
+justify-content: space-around;
+background-color: rgb(182, 182, 181);
+color: aliceblue;
+padding: 20px 0;
+
+}
+
+/* 
+.footer section h3{
+
+margin-bottom: 10px;
+
+} */
+
+
+
+
+.footer section{
+
+display: flex;
+gap: 20px
+
+}
+
+.container5{
+
+
+display: flex;
+
+
+
+
+}
+
+
+
+.card-body{
+
+  flex: 0;
+
+    /* (Optional) Aligns the text within each section to the left */
+    text-align: left;
+
+}
+
+
+
+.pricing {
+  text-align: center;
+  padding: 40px;
+}
+
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+.card {
+  width: 280px;
+  background: #3ad65a;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+
+.card img {
+  width: 90px;
+  height: 80px;
+  
+}
+
+.card button {
+  background-color: #151618;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #435c76;
+}
+
+.card_header{
+  padding-top: 20px;
+}
+
+.card_description{
+  padding-top: 20px;
+  line-height: 2;
+}
+
+.card_button{
+  padding-top: 30px;
+}
+
+
+.login_image{
+  width: 25px;
+  height: 30px;
+}
+
+
+
+.card{
+
+  background-color: #7f6fbd;
+  opacity: 88%;
+  height: 340px;
+  width: 24%;
+
+
+}
+
+
+
+.contact{
+
+border: 4px solid #7dc97b;
+height: 560px;
+width: 480px;
+
+}
+
+
+.sidebar{
+
+width: 80px;
+background-color: #2ecc71;
+height: 590px;
+
+
+}
+
+
+
+.why{
+
+background-color: #31c943;
+opacity: 80%;
+
+height: 26px;
+width: 9%;
+
+border-radius: 25px;
+
+}
+
+
+.partner_image{
+
+  width: 30%;
+  height: 30%;
+
+}
+
+
+
+
+.Revolve_image{
+
+height: 80%;
+width: 105%;
+
+padding-left:20px;
+}
+
+
+.About{
+
+background-color: #ddd;
+opacity: 80%;
+
+height: 29px;
+
+width: 5%;
+
+border-radius: 29px;
+
+margin-bottom: 30px;
+
+
+}
+
+.at{
+
+padding: 5%;
+
+}
+
+
+.whole{
+  display: flex;
+  flex-direction: row;
+  height: 40%;
+  width: 90%;
+}
+
+
+
+.feature{
+
+
+background-color: #656575;
+
+
+height: 29px;
+
+width: 8%;
+
+
+
+border-radius: 20px;
+}
+
+
+.techno{
+
+padding: 80px;
+}
+
+
+.btt{
+
+justify-content:flex-end;
+
+
+}
+
+
+
+.navbar{
+
+background-color: #31c943;
+ z-index: 1000;
+}
+
+
+
+.wms{
+
+  justify-content: left;
+justify-content: flex-end;
+
+}
+
+.wms { display: flex; justify-content: flex-end; }
