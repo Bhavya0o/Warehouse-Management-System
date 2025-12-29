@@ -1,52 +1,47 @@
 import React from "react";
 
+import Wms from "./images/Wms.png";
+import order from "./images/order.png";
+import Optimization from "./images/Optimization.png";
+import reporting from "./images/reporting.png";
 
+function Feature() {
+  return (
+    <section className="feature-section">
+      <h4 className="feature-subtitle">FEATURES</h4>
+      <h1 className="feature-title">Warehouse Management System</h1>
 
-import featuress from "./images/featuress.png"
+      <div className="feature-container">
+        {/* Inventory */}
+        <div className="feature-card">
+          <img src={Wms} alt="Inventory Management" />
+          <h3>Inventory Management</h3>
+          <p>Track and organize inventory levels</p>
+        </div>
 
+        {/* Order */}
+        <div className="feature-card">
+          <img src={order} alt="Order Processing" />
+          <h3>Order Processing</h3>
+          <p>Manage order fulfillment and shipping</p>
+        </div>
 
-function Feature(){
+        {/* Optimization */}
+        <div className="feature-card">
+          <img src={Optimization} alt="Warehouse Optimization" />
+          <h3>Warehouse Optimization</h3>
+          <p>Optimize storage space and layout</p>
+        </div>
 
-
-return(
-<>
-
-
-<center>
-<div className="feature">
-
-<p>Key - features</p>
-
-</div>
-
-
-<div className="techno">
-
-<h1> <b>Technology That Drives Your Business Forward</b> </h1>
-</div>
-
-
-
-<h4><i>Our platform is packed with powerful features designed to streamline every aspect of your warehouse operations, from receiving to shipping.</i></h4>
-
-
-<div className="faetures">
-<img src={featuress} />
-</div>
-
-</center>
-
-
-
-
-
-
-
-</>
-)
+        {/* Reporting */}
+        <div className="feature-card">
+          <img src={reporting} alt="Reporting & Analytics" />
+          <h3>Reporting & Analytics</h3>
+          <p>Generate reports and analyze performance</p>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default Feature;
-
-
-

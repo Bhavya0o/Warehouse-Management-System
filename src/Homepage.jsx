@@ -1,16 +1,15 @@
-
-
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "./config/firebase";
-import wms from "./images/wms.jpg";
 
-import { HiArrowLeftOnRectangle } from "react-icons/hi2";
+import ProductPieChart from "./ProductPieChart";
+
 
 function Homepage() {
   const navigate = useNavigate();
 
+  // 🔐 Auth check
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (!user) navigate("/login");
@@ -23,21 +22,24 @@ function Homepage() {
     navigate("/login");
   };
 
+  // 📦 State
   const [isOpen, setIsOpen] = useState(true);
   const [activeSection, setActiveSection] = useState("Dashboard");
 
-  const toggleSidebar = () => setIsOpen(!isOpen);
+  const [shipments] = useState([
+    { id: 1, name: "Shipment 1", status: "In Transit" },
+    { id: 2, name: "Shipment 2", status: "Delivered" },
+  ]);
 
+  const [orders, setOrders] = useState([
+    { id: 1, product: "Laptop", status: "Pending" },
+    { id: 2, product: "Mobile", status: "Completed" },
+     { id: 3, product: "pc", status: "Completed" },
+  ]);
 
-// for shipments 
-
-const [shipments, SetShipments] = useState([
-
-{id: 1, name:"shipment 1", status: "In Transit" },
-{id: 2, name:"shipment 2", status: "Delivered" },
-
-]);
-
+  const [showForm, setShowForm] = useState(false);
+  const [newProduct, setNewProduct] = useState("");
+  const [newStatus, setNewStatus] = useState("Pending");
 
   const menuItems = [
     "Dashboard",
@@ -48,121 +50,182 @@ const [shipments, SetShipments] = useState([
     "Analytics",
   ];
 
+  const handleAddOrder = (e) => {
+    e.preventDefault();
+    if (!newProduct) return;
+
+    setOrders([
+      ...orders,
+      {
+        id: orders.length + 1,
+        product: newProduct,
+        status: newStatus,
+      },
+    ]);
+
+    setNewProduct("");
+    setNewStatus("Pending");
+    setShowForm(false);
+  };
+
+  // 📊 Dynamic content
+  const renderContent = () => {
+    switch (activeSection) {
+      case "Dashboard":
+        return (
+          <>
+            <h2>Dashboard Overview</h2>
+            <p>Welcome to Daulatwal Godown Dashboard</p>
+
+            <div className="dashboard-cards">
+              <div className="card">Total Orders: {orders.length}</div>
+              <div className="card">Total Shipments: {shipments.length}</div>
+            </div>
+          </>
+        );
+
+      case "Orders":
+        return (
+          <>
+            <div className="orders-header">
+              {/* <h2>Orders</h2> */}
+              <button
+                className="addproducts"
+                onClick={() => setShowForm(!showForm)}
+              >
+                + Add Product
+              </button>
+            </div>
+
+            {showForm && (
+              <div className="order-form">
+                <form onSubmit={handleAddOrder}>
+                  <input
+                    type="text"
+                    placeholder="Product name"
+                    value={newProduct}
+                    onChange={(e) => setNewProduct(e.target.value)}
+                    required
+                  />
+
+                  <select
+                    value={newStatus}
+                    onChange={(e) => setNewStatus(e.target.value)}
+                  >
+                    <option value="Pending">Pending</option>
+                    <option value="Completed">Completed</option>
+                  <option value="Completed">Hold</option>
+                  </select>
+
+                  <button type="submit" className="btn">
+                    Save
+                  </button>
+                </form>
+              </div>
+            )}
+
+            <div className="table-wrapper">
+              <table className="table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Product</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {orders.map((o) => (
+                    <tr key={o.id}>
+                      <td>{o.id}</td>
+                      <td>{o.product}</td>
+                      <td>{o.status}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </>
+        );
+
+      case "Shipments":
+        return (
+          <>
+            <h2>Shipments</h2>
+            <ul>
+              {shipments.map((s) => (
+                <li key={s.id}>
+                  {s.name} — <b>{s.status}</b>
+                </li>
+              ))}
+            </ul>
+          </>
+        );
+
+      case "Reports":
+        return <h2>Reports Section</h2>;
+
+      case "Suppliers":
+        return <h2>Suppliers Section</h2>;
+
+    case "Analytics":
   return (
+    <>
     <center>
-     
-      <nav
-        style={{
-          width: "100%",
-          backgroundColor: "#3c3b3b",
-          padding: "10px 0",
-          color: "white",
-          display: "flex",
-          justifyContent: "space-between",
-          paddingLeft: "20px",
-          paddingRight: "20px",
-        }}
-      >
-        <button
-          onClick={toggleSidebar}
-          style={{
-            backgroundColor: "#5e5e5e",
-            color: "white",
-            border: "none",
-            padding: "7px 32px",
-            cursor: "pointer",
-            borderRadius: "5px",
-          }}
-        >
+      <div className="analytics-container">
+      <h1>Analytics</h1>
+
+      <div className="chart-card">
+        <h4>Products Distribution</h4>
+        <ProductPieChart orders={orders} />
+        
+        
+        </div>
+      </div>
+      </center>
+    </>
+  );
+
+
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <>
+      {/* Navbar */}
+      <nav className="navbar">
+        <button className="btn" onClick={() => setIsOpen(!isOpen)}>
           ☰
-        </button> <b><h3><i>Daulatwal Godown's</i></h3></b>
-
-{/* for logout button  */}
-
-        <button
-          onClick={handleLogout}
-          style={{
-            backgroundColor: "green",
-            color: "white",
-            border: "none",
-            padding: "8px 12px",
-            borderRadius: "5px",
-            cursor: "pointer",
-          }}
-        >
+        </button>
+        <h3>Daulatwal Godown's</h3>
+        <button className="btn logout" onClick={handleLogout}>
           Logout
         </button>
-
       </nav>
 
-      <div style={{ display: "flex" }}>
-        {/* ================= SIDEBAR ================= */}
+      {/* Layout */}
+      <div className="layout">
         {isOpen && (
-          <div
-            style={{
-              height: "100vh",
-              backgroundColor: "#747171",
-              color: "white",
-              width: "220px",
-              paddingTop: "40px",
-            }}
-          >
-            <ul style={{ listStyle: "none", padding: "0" }}>
+          <aside className="sidebar">
+            <ul>
               {menuItems.map((item) => (
                 <li
                   key={item}
                   onClick={() => setActiveSection(item)}
-                  style={{
-                    padding: "14px 20px",
-                    cursor: "pointer",
-                    backgroundColor:
-                      activeSection === item ? "rgba(255,255,255,0.2)" : "transparent",
-                    transition: "0.2s",
-                  }}
+                  className={activeSection === item ? "active" : ""}
                 >
                   {item}
                 </li>
               ))}
             </ul>
-          </div>
+          </aside>
         )}
 
-      
-
-        
-       
+        <main className="content">{renderContent()}</main>
       </div>
-    </center>
+    </>
   );
 }
 
 export default Homepage;
-
-
-
-// import React from "react";
-
-// function Homepage(){
-
-
-// return(
-
-
-// <div>
-
-// <div>
-
-//   <li className='bi bi-bootstrap-fill'></li>
-//   <span className='brand-name fs-4'> yousaf </span>
-// </div>
-
-// <div className='list-group list-group'></div>
-
-
-// </div> 
-
-// )
-
-
-
-// }

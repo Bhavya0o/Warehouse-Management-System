@@ -1,53 +1,61 @@
 import React from "react";
+import Revolve from "./images/Revolve.png";
 
+function About() {
+  return (
+    <>
+      <div className="about-wrapper">
 
-import Revolve from './images/Revolve.png'
+        {/* Title */}
+        <div className="about-title">
+          <span>About Us</span>
+          <h1>Revolutionizing Warehouse Operations</h1>
+        </div>
 
+        {/* Main Section */}
+        <div className="about-container">
 
-function About(){
+          {/* Left Content */}
+          <div className="about-card">
+            <h2>Who We Are</h2>
+            <p>
+              At <b>Warehouse Pro</b>, our mission is to empower businesses of all
+              sizes with smart technology to streamline supply chains and
+              optimize warehouse operations.
+            </p>
 
+            <div className="about-features">
+              <div className="feature-box">
+                <h3>🚀 Mission</h3>
+                <p>To simplify warehouse operations using modern automation.</p>
+              </div>
 
+              <div className="feature-box">
+                <h3>👁 Vision</h3>
+                <p>To become a trusted leader in warehouse management solutions.</p>
+              </div>
 
-return(
-<>
+              <div className="feature-box">
+                <h3>💡 Values</h3>
+                <p>Innovation, Accuracy, Transparency & Growth.</p>
+              </div>
+            </div>
+          </div>
 
-<br></br>
-<div className="About">
-    
-About Us
-</div>
+          {/* Right Image */}
+          <div className="about-image">
+            <img src={Revolve} alt="Warehouse" />
+          </div>
 
-<div className="whole">
+        </div>
 
-<div className="desc"> 
+        <div className="about-footer">
+          <h3>Thank you for choosing us!</h3>
+        </div>
 
-<h2>Revolutionizing Warehouse Operations</h2>
-
-
-<div  className="at">
-<i>At Warehouse Pro, our mission is to empower businesses of all sizes with the technology to streamline their supply chain. We believe that efficient warehouse management is the backbone of successful e-commerce and retail operations.</i>
-</div>
-
-
-
-
-
-</div>
-
-<div className="wholee">
-<img  className="Revolve_image" src={Revolve} alt="Relvolve"/> </div>
-
-</div>
-
-
-
-<center><h3><i>Thank you for choosing us!</i></h3></center>
-
-
-
-
-</>
-)
+      </div>
+    </>
+  );
 }
 
 export default About;

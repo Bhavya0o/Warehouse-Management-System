@@ -202,25 +202,29 @@ function Register() {
 <h3><b><i>Daulatwal Godown's</i></b></h3><br></br></div><br></br><br></br>
 <div className="card">
         
-      <h2>Register</h2>
+      <h2>Register</h2><br></br>
       <form onSubmit={handleRegister}>
+
+        <b> Email Address</b><br></br>
         <input
           type="email"
           placeholder="Enter Email"
+          class="rounded-input"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <br /><br />
+        <br /><br /><b>Password</b><br></br>
         <input
           type="password"
           placeholder="Enter Password"
+          class="rounded-input"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
         <br /><br />
-        <button type="submit">Register</button><br></br>
+        <button class="button-85"type="submit">Register</button>
       </form><br></br>
-      <p>Already have an account?<br></br> <button onClick={() => navigate("/login")}>Login</button></p>
+      <p>Already have an account?<br></br><button class="button-85"onClick={() => navigate("/login")}>Login</button></p>
       </div>
 
     {/* <button onClick={() => navigate("/")}>

@@ -73,7 +73,7 @@ function Contact() {
 
 
 
- <nav> <h1>Contact Us</h1><br></br></nav> 
+ <nav> <h1>Contact Us</h1></nav> 
         
         {/* <h1>Contact Us</h1><br></br> */}
 
@@ -83,6 +83,8 @@ function Contact() {
           <input
             type="text"
             name="name"
+
+            class="rounded-input"
             placeholder="Enter Name"
             value={formData.name}
             onChange={handleChange}
@@ -93,6 +95,7 @@ function Contact() {
           <input
             type="text"
             name="subject"
+            class="rounded-input"
             placeholder="Enter Subject"
             value={formData.subject}
             onChange={handleChange}
@@ -101,8 +104,9 @@ function Contact() {
 
           <b>Phone No</b><br />
           <input
-            type="text"
+            type="number"
             name="phone"
+            class="rounded-input"
             placeholder="Enter Phone Number"
             value={formData.phone}
             onChange={handleChange}
@@ -113,6 +117,7 @@ function Contact() {
           <input
             type="email"
             name="email"
+            class="rounded-input"
             placeholder="Provide Email"
             value={formData.email}
             onChange={handleChange}
@@ -123,10 +128,11 @@ function Contact() {
           <textarea
             name="message"
             placeholder="Send us Message"
+            class="rounded-input"
             value={formData.message}
             onChange={handleChange}
             required
-          /><br /><br />
+          />
 
           <h5>Choose Age</h5>
           <select
@@ -141,9 +147,17 @@ function Contact() {
             ))}
           </select><br /><br />
 
-          <button type="submit" className="btn btn-secondary">
+          <button class="button-54" role="button" type="submit">
             Submit
           </button>
+
+
+
+
+
+
+
+
 
         </form>
       </center>

@@ -58,7 +58,7 @@ function Landing() {
 </div>
  */}
 
-<div className="navbar">
+<div className="na">
   <div className="navbar-left">
     <img src={logo} alt="Warehouse Logo" className="logo" />
    
@@ -68,13 +68,30 @@ function Landing() {
     <Link to="/Features">Features</Link>
     <Link to="/Why">Why-Us</Link>
     <Link to="/About">About</Link>
-    <Link to="/contact">Contact</Link>
+    <Link to="/contact">Contact Us</Link>
   </div>
 
   <div className="navbar-right">
-    <button className="login-btn">
+
+
+
+{/* button type="submit" className="submit-btn" */}
+
+    <button type="submit" className="submit-btn">
       <Link to="/Login">Login</Link>
     </button>
+
+
+
+
+
+
+
+
+
+
+
+
     {/* <img className="login_image" src={login} alt="login" /> */}
   </div>
 </div>
@@ -141,10 +158,21 @@ function Landing() {
 
       <br></br>
 
-      <div className="button">
+      
 
 
 
+     
+
+
+
+      <hr></hr>
+</div>
+</center>
+
+
+
+ <center>
       <button type="button" class="btn btn-success">
           Get started for free
         </button>
@@ -152,16 +180,11 @@ function Landing() {
 
  <button type="button" class="btn btn-light">
           View Demo
-        </button>
-      </div>
+        </button><br></br><br></br><br></br>
 
 
-
-      <hr></hr>
-</div>
-</center>
-      <center>
-        key Features<br></br>
+     
+       <b> key Features</b><br></br>
         <h1>Built for Efficiency </h1>
         <p>
           Our platform is designed to streamline your operations, reduce errors,
@@ -216,7 +239,7 @@ function Landing() {
 
         <div class="pricing-container">
          
-          <div class="card">
+          <div class="cardd">
             <div class="card_image">
               <img src={del} alt="premium plan" />
             </div>
@@ -231,11 +254,19 @@ function Landing() {
             </div>
 
             <div className="card_button">
-            <button>buy</button>
+            {/* <button>buy</button> */}
+
+<button class="button-89" role="button">
+ <Link to="/Plan">Buy</Link>
+</button>
+
+
+
+            
             </div>
           </div>
 
-          <div class="card">
+          <div class="cardd">
             <div class="card_image">
               <img src={del} alt="premium plan" />
             </div>
@@ -250,14 +281,17 @@ function Landing() {
             </div>
 
             <div className="card_button">
-            <button>buy</button>
+<button  class="button-89" role="button" type="submit">
+ <Link to="/Plan">Buy</Link>
+</button>
+
             </div>
           </div>
 
 
 
 
-          <div class="card">
+          <div class="cardd">
             <div class="card_image">
               <img src={del} alt="premium plan" />
             </div>
@@ -272,7 +306,10 @@ function Landing() {
             </div>
 
             <div className="card_button">
-            <button>buy</button>
+<button   class="button-89" role="button"type="submit">
+ <Link to="/Plan">Buy</Link>
+</button>
+
             </div>
           </div>
 
@@ -280,7 +317,7 @@ function Landing() {
 
 
 
-          <div class="card">
+          <div class="cardd">
             <div class="card_image">
               <img src={del} alt="premium plan" />
             </div>
@@ -295,7 +332,10 @@ function Landing() {
             </div>
 
             <div className="card_button">
-            <button>buy</button>
+<button  class="button-89" role="button"type="submit" >
+ <Link to="/Plan">Buy</Link>
+</button>
+
             </div>
           </div>
         </div>
@@ -315,9 +355,12 @@ function Landing() {
         </p>
         <br></br>
 
-        <button type="button" class="btn btn-primary btn-lg">
-          Know more About 
-        </button>
+        {/* <button type="button" class="btn btn-primary btn-lg"> */}
+          <Link to="/features"> Know more About </Link>
+          
+        {/* </button> */}
+
+
       </center>
 
       <br></br>
@@ -330,7 +373,7 @@ function Landing() {
 
 
 
-
+{/* 
 
       <div className="footer section">
         <h3>Support</h3>
@@ -345,20 +388,21 @@ function Landing() {
             <a href="#">Feedback</a>
           </li>
         </ul>
-      </div>
+      </div> */}
 
       <div className="footer section">
         <h3>Follow us!</h3>
         <ul>
-          <li>
-            <a href="#">facebook</a>{" "}
-          </li>
-          <li>
-            <a href="#">Twitter </a>{" "}
-          </li>
-          <li>
-            <a href="#">Instagram </a>{" "}
-          </li>
+          <div className="facebook">
+          <b>
+            <a href="www.facebook.com">facebook</a>{""}
+          </b></div>
+          <b>
+            <a href="www.twitter.com">Twitter </a>{" "}
+          </b><br></br>
+          <b>
+            <a href="www.instagram.com">Instagram </a>{" "}
+          </b>
         </ul>
       </div>
     </>
