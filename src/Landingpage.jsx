@@ -166,13 +166,13 @@ function Landing() {
 
 
 
-      <hr></hr>
+      {/* <hr></hr> */}
 </div>
 </center>
 
 
 
- <center>
+ <center><br></br>
       <button type="button" class="btn btn-success">
           Get started for free
         </button>
@@ -225,7 +225,7 @@ function Landing() {
         </div>
       </div>
 
-      <hr></hr>
+      {/* <hr></hr> */}
 
       {/* bootstrap sections start here  */}
 
