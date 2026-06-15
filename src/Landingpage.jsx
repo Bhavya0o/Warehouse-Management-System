@@ -1,417 +1,554 @@
 import React from "react";
-
-// import myphoto from '/src/images/myphoto.png';
-
-import MyPhoto from "./images/myphoto.png";
-
-import Rel from "./images/rel.png";
-
+import {
+  Box,
+  Container,
+  AppBar,
+  Toolbar,
+  Button,
+  Typography,
+  Grid,
+  Card,
+  CardContent,
+  CardMedia,
+  Stack,
+  Paper,
+  Chip,
+} from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 import warehouse from "./images/warehouse.jpg";
-
 import logo from "./images/logo.png";
-
 import del from "./images/del.png";
-
-import login from "./images/login.jpg";
-
-import { Link } from "react-router-dom";
-
-
-
+import MyPhoto from "./images/myphoto.png";
+import Rel from "./images/rel.png";
 
 function Landing() {
   return (
-    <>
-      {/* <div class="navbar"> */}
-     
-
-
-{/* <div className="nav">
-<Link to="/Features">Features</Link>
-       
-<Link to="/Why">Why-Us</Link>
-
-<Link to="/About">About</Link>
-        
-<Link to="/contact">Contact</Link>
-
- <button><Link to="/Login">Login</Link></button>
-
-      <img className="login_image" src={login} alt="login" /> </div>
-      </div> */}
-     
-{/* <div className="nav">
-  <div className="nav-left">
-    <Link to="/Features">Features</Link>
-    <Link to="/Why">Why-Us</Link>
-    <Link to="/About">About</Link>
-    <Link to="/contact">Contact</Link>
-  </div>
-
-  <div className="nav-right">
-    <button>
-      <Link to="/Login">Login</Link>
-    </button>
-
-    <img className="login_image" src={login} alt="login" />
-  </div>
-</div>
- */}
-
-<div className="na">
-  <div className="navbar-left">
-    <img src={logo} alt="Warehouse Logo" className="logo" />
-   
-  </div>
-
-  <div className="navbar-center">
-    <Link to="/Features">Features</Link>
-    <Link to="/Why">Why-Us</Link>
-    <Link to="/About">About</Link>
-    <Link to="/contact">Contact Us</Link>
-  </div>
-
-  <div className="navbar-right">
-
-
-
-{/* button type="submit" className="submit-btn" */}
-
-    <button type="submit" className="submit-btn">
-      <Link to="/Login">Login</Link>
-    </button>
-
-
-
-
-
-
-
-
-
-
-
-
-    {/* <img className="login_image" src={login} alt="login" /> */}
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <div className="content">
-        <div className="heading">
-
-
- <div className="color"> <h3><i>Daulatwal Godown's</i></h3></div><br></br><br></br>
-
-<h1>
-            Intelligent Warehouse Management,<br></br>
-            Simplified.
-          </h1>
-        </div>
-        <br></br>
-
-        {/* <div className=".hero-content"> */}
-
-        <div className="hero-image">
-          <img src={warehouse} alt="Warehouse" />
-        </div>
-
-
-
-
-
-
-
-
-      {/* </div> */}
-
-    
-      </div>
-
-
-<center>
-<div className="bg">
-      <br></br>
-      <p>
-        From inventory tracking to order fulfillment, Warehouse Pro 
-        provides the tools you need to optimize your supply chain and scale your
-        business.
-      </p>
-
-
-
-
-      {/* </div> */}
-
-      <br></br>
-
-      
-
-
-
-     
-
-
-
-      {/* <hr></hr> */}
-</div>
-</center>
-
-
-
- <center><br></br>
-      <button type="button" class="btn btn-success">
-          Get started for free
-        </button>
-
-
- <button type="button" class="btn btn-light">
-          View Demo
-        </button><br></br><br></br><br></br>
-
-
-     
-       <b> key Features</b><br></br>
-        <h1>Built for Efficiency </h1>
-        <p>
-          Our platform is designed to streamline your operations, reduce errors,
-          and provide real-time visibility into your entire warehouse.
-        </p>
-      </center>
-      <br></br>
-
-      <div class="container">
-        <div class="feature-card">
-          <img
-            src={MyPhoto}
-            alt="Warehouse Feature 1"
-            style={{ width: "100%", maxWidth: "300px", height: "auto" }}
-          />
-          <p>
-            <strong>Real-Time Inventory Control</strong>
-            <br />
-            Never lose track of your stock again. Monitor inventory levels
-            across multiple locations, get low-stock alerts, and automate
-            reordering processes.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <img
-            src={Rel}
-            alt="Warehouse Feature 2"
-            style={{ width: "90%", maxWidth: "300px", height: "auto" }}
-          />
-          <p>
-            <strong>Actionable Analytics</strong>
-            <br />
-            Make data-driven decisions. Our analytics dashboard provides
-            insights into sales trends, inventory turnover, and fulfillment
-            performance.
-          </p>
-        </div>
-      </div>
-
-      {/* <hr></hr> */}
-
-      {/* bootstrap sections start here  */}
-
-      <section class="pricing">
-        <h3>Pricing</h3>
-        <h1>Plans for Every Stage</h1>
-        <p>
-          Whether you're just starting out or running a large-scale operation,
-          we have a plan that fits your needs.
-        </p>
-
-        <div class="pricing-container">
-         
-          <div class="cardd">
-            <div class="card_image">
-              <img src={del} alt="premium plan" />
-            </div>
-
-            <div class="card_header">
-             
-              <h3>Basic plan</h3>
-            </div>
-            <div class="card_description">
-             
-              $50/weekly up to 200 orders/weekly premium inventory Management
-            </div>
-
-            <div className="card_button">
-            {/* <button>buy</button> */}
-
-<button class="button-89" role="button">
- <Link to="/">Buy</Link>
-</button>
-
-
-
-            
-            </div>
-          </div>
-
-          <div class="cardd">
-            <div class="card_image">
-              <img src={del} alt="premium plan" />
-            </div>
-
-            <div class="card_header">
-             
-              <h3>gold plan</h3>
-            </div>
-            <div class="card_description">
-             
-              $50/weekly up to 200 orders/weekly premium inventory Management
-            </div>
-
-            <div className="card_button">
-<button  class="button-89" role="button" type="submit">
- <Link to="/">Buy</Link>
-</button>
-
-            </div>
-          </div>
-
-
-
-
-          <div class="cardd">
-            <div class="card_image">
-              <img src={del} alt="premium plan" />
-            </div>
-
-            <div class="card_header">
-             
-              <h3> platinum plan </h3>
-            </div>
-            <div class="card_description">
-             
-              $50/weekly up to 200 orders/weekly premium inventory Management
-            </div>
-
-            <div className="card_button">
-<button   class="button-89" role="button"type="submit">
- <Link to="/">Buy</Link>
-</button>
-
-            </div>
-          </div>
-
-      
-
-
-
-          <div class="cardd">
-            <div class="card_image">
-              <img src={del} alt="premium plan" />
-            </div>
-
-            <div class="card_header">
-             
-              <h3>ultra plan</h3>
-            </div>
-            <div class="card_description">
-             
-              $50/weekly up to 200 orders/weekly premium inventory Management
-            </div>
-
-            <div className="card_button">
-<button  class="button-89" role="button"type="submit" >
- <Link to="/">Buy</Link>
-</button>
-
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <hr></hr>
-
-      <center>
-        <h1>
-          Ready to Transform Your<br></br> Warehouse?
-        </h1>
-        <br></br>
-
-        <p>
-          Sign up today and get started with a free plan. No credit card
-          required.
-        </p>
-        <br></br>
-
-        {/* <button type="button" class="btn btn-primary btn-lg"> */}
-          <Link to="/features"> Know more About </Link>
-          
-        {/* </button> */}
-
-
-      </center>
-
-      <br></br>
-      <br></br>
-      <hr></hr>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-
-
-
-{/* 
-
-      <div className="footer section">
-        <h3>Support</h3>
-        <ul>
-          <li>
-            <a href="#">Help center</a>
-          </li>
-          <li>
-            <a href="#">Faq</a>
-          </li>
-          <li>
-            <a href="#">Feedback</a>
-          </li>
-        </ul>
-      </div> */}
-
-      <div className="footer section">
-        <h3>Follow us!</h3>
-        <ul>
-          <div className="facebook">
-          <b>
-            <a href="www.facebook.com">facebook</a>{""}
-          </b></div>
-          <b>
-            <a href="www.twitter.com">Twitter </a>{" "}
-          </b><br></br>
-          <b>
-            <a href="www.instagram.com">Instagram </a>{" "}
-          </b>
-        </ul>
-      </div>
-    </>
- 
-
-
-
-
-);
+    <Box sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+      {/* Modern Navigation Bar */}
+      <AppBar
+        position="sticky"
+        elevation={0}
+        sx={{
+          background: "rgba(12, 24, 46, 0.82)",
+          backdropFilter: "blur(18px)",
+          borderBottom: "1px solid rgba(255, 255, 255, 0.12)",
+          boxShadow: "0 12px 40px rgba(0, 0, 0, 0.12)",
+        }}
+      >
+        <Container maxWidth="lg">
+          <Toolbar disableGutters sx={{ display: "flex", justifyContent: "space-between", py: 1.5, gap: 2 }}>
+            <Box sx={{ display: "flex", alignItems: "center", gap: 1.5 }}>
+              <Box
+                component="img"
+                src={logo}
+                alt="Logo"
+                sx={{ width: 48, height: 48, borderRadius: "14px", boxShadow: "0 10px 30px rgba(0,0,0,0.18)" }}
+              />
+              <Typography variant="h6" sx={{ color: "white", fontWeight: 700, letterSpacing: 0.8 }}>
+                WMS
+              </Typography>
+            </Box>
+
+            <Stack direction="row" spacing={1.5} sx={{ flex: 1, justifyContent: "center" }}>
+              {[
+                { label: "Features", to: "/Features" },
+                { label: "Why Us", to: "/Why" },
+                { label: "About", to: "/About" },
+                { label: "Contact", to: "/contact" },
+              ].map((item) => (
+                <Button
+                  key={item.label}
+                  component={RouterLink}
+                  to={item.to}
+                  sx={{
+                    color: "rgba(255,255,255,0.88)",
+                    textTransform: "none",
+                    fontWeight: 600,
+                    fontSize: 14,
+                    px: 2.5,
+                    borderRadius: "999px",
+                    transition: "background 0.25s ease, transform 0.25s ease",
+                    "&:hover": {
+                      background: "rgba(255,255,255,0.12)",
+                      color: "white",
+                      transform: "translateY(-1px)",
+                    },
+                  }}
+                >
+                  {item.label}
+                </Button>
+              ))}
+            </Stack>
+
+            <Button
+              component={RouterLink}
+              to="/Login"
+              variant="outlined"
+              sx={{
+                color: "white",
+                borderColor: "rgba(255,255,255,0.72)",
+                borderRadius: "999px",
+                px: 3,
+                py: 1.1,
+                fontWeight: 700,
+                textTransform: "none",
+                transition: "background 0.25s ease, border-color 0.25s ease",
+                "&:hover": {
+                  background: "rgba(255,255,255,0.14)",
+                  borderColor: "white",
+                },
+              }}
+            >
+              Login
+            </Button>
+          </Toolbar>
+        </Container>
+      </AppBar>
+
+      {/* Hero Section */}
+      <Box
+        sx={{
+          background: "linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%)",
+          padding: "80px 40px",
+          flex: 1,
+        }}
+      >
+        <Container maxWidth="lg">
+          <Grid container spacing={4} alignItems="center">
+            <Grid item xs={12} md={6}>
+              <Chip
+                label="Daulatwal Godown's"
+                sx={{
+                  background: "linear-gradient(135deg, #1976d2 0%, #1565c0 100%)",
+                  color: "white",
+                  fontWeight: 600,
+                  marginBottom: 2,
+                  fontSize: 16,
+                  padding: 2,
+                }}
+              />
+              <Typography
+                variant="h3"
+                sx={{
+                  fontWeight: 700,
+                  lineHeight: 1.3,
+                  color: "#1a1a1a",
+                  marginBottom: 2,
+                }}
+              >
+                Intelligent Warehouse Management, Simplified.
+              </Typography>
+              <Typography
+                variant="body1"
+                sx={{ color: "#666", fontSize: 16, marginBottom: 3, lineHeight: 1.8 }}
+              >
+                From inventory tracking to order fulfillment, Warehouse Pro provides
+                the tools you need to optimize your supply chain and scale your business.
+              </Typography>
+              <Stack direction="row" spacing={2}>
+                <Button
+                  component={RouterLink}
+                  to="/Register"
+                  variant="contained"
+                  sx={{
+                    background: "linear-gradient(135deg, #1976d2 0%, #1565c0 100%)",
+                    padding: "12px 32px",
+                    fontWeight: 600,
+                    borderRadius: "8px",
+                    textTransform: "none",
+                    fontSize: 15,
+                  }}
+                >
+                  Get Started Free
+                </Button>
+                <Button
+                  variant="outlined"
+                  sx={{
+                    borderColor: "#1976d2",
+                    color: "#1976d2",
+                    padding: "12px 32px",
+                    fontWeight: 600,
+                    borderRadius: "8px",
+                    textTransform: "none",
+                    fontSize: 15,
+                  }}
+                >
+                  View Demo
+                </Button>
+              </Stack>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Box
+                component="img"
+                src={warehouse}
+                alt="Warehouse"
+                sx={{
+                  width: "100%",
+                  borderRadius: "16px",
+                  boxShadow: "0 10px 40px rgba(0, 0, 0, 0.15)",
+                  transition: "transform 0.3s ease",
+                  "&:hover": { transform: "scale(1.02)" },
+                }}
+              />
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
+
+      {/* Key Features Section */}
+      <Box sx={{ padding: "80px 40px", background: "#fff" }}>
+        <Container maxWidth="lg">
+          <Box sx={{ textAlign: "center", marginBottom: 6 }}>
+            <Chip
+              label="Key Features"
+              sx={{
+                background: "linear-gradient(135deg, #1976d2 0%, #1565c0 100%)",
+                color: "white",
+                marginBottom: 2,
+              }}
+            />
+            <Typography variant="h3" sx={{ fontWeight: 700, marginBottom: 2 }}>
+              4 Pillars of Smarter Warehousing
+            </Typography>
+            <Typography variant="body1" sx={{ color: "#666", fontSize: 16 }}>
+              Discover how our modern warehouse platform combines automation, analytics,
+              and intelligent workflows to keep your business running smoothly.
+            </Typography>
+          </Box>
+
+          <Grid container spacing={3}>
+            {[
+              {
+                title: "Smart Inventory",
+                description:
+                  "Keep your stock accurate with automated tracking, alerts, and reorder workflows.",
+              },
+              {
+                title: "Fast Fulfillment",
+                description:
+                  "Reduce lead times with optimized picking, packing, and shipment coordination.",
+              },
+              {
+                title: "Insightful Analytics",
+                description:
+                  "Visual dashboards reveal trends, bottlenecks, and performance across your supply chain.",
+              },
+              {
+                title: "Secure Operations",
+                description:
+                  "Protect your data and control access with modern warehouse security features.",
+              },
+            ].map((feature) => (
+              <Grid item xs={12} sm={6} md={3} key={feature.title}>
+                <Card
+                  sx={{
+                    borderRadius: "24px",
+                    minHeight: 260,
+                    p: 3,
+                    boxShadow: "0 18px 45px rgba(15, 34, 76, 0.08)",
+                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                    border: "1px solid rgba(25, 118, 210, 0.12)",
+                    "&:hover": {
+                      transform: "translateY(-10px)",
+                      boxShadow: "0 26px 60px rgba(15, 34, 76, 0.14)",
+                    },
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: 56,
+                      height: 56,
+                      borderRadius: "16px",
+                      background: "linear-gradient(135deg, #1976d2 0%, #1565c0 100%)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      mb: 3,
+                      boxShadow: "0 14px 30px rgba(25, 118, 210, 0.16)",
+                    }}
+                  >
+                    <Typography sx={{ color: "white", fontWeight: 700, fontSize: 18 }}>
+                      {feature.title.split(" ").map((word) => word[0]).join("")}
+                    </Typography>
+                  </Box>
+                  <Typography variant="h6" sx={{ fontWeight: 700, marginBottom: 1.5 }}>
+                    {feature.title}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: "#555", lineHeight: 1.8 }}>
+                    {feature.description}
+                  </Typography>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </Box>
+
+      {/* Pricing Section */}
+      <Box
+        sx={{
+          padding: "80px 40px",
+          background: "linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%)",
+        }}
+      >
+        <Container maxWidth="lg">
+          <Box sx={{ textAlign: "center", marginBottom: 6 }}>
+            <Chip
+              label="Pricing"
+              sx={{
+                background: "linear-gradient(135deg, #1976d2 0%, #1565c0 100%)",
+                color: "white",
+                marginBottom: 2,
+              }}
+            />
+            <Typography variant="h3" sx={{ fontWeight: 700, marginBottom: 2 }}>
+              Plans for Every Stage
+            </Typography>
+            <Typography variant="body1" sx={{ color: "#666", fontSize: 16 }}>
+              Whether you're just starting out or running a large-scale operation, we have
+              a plan that fits your needs.
+            </Typography>
+          </Box>
+
+          <Grid container spacing={3}>
+            {[
+              {
+                name: "Basic",
+                subtitle: "Essential coverage",
+                price: "$25/week",
+                features: ["Inventory tracking", "1 location", "Email support"],
+                highlight: false,
+              },
+              {
+                name: "Gold",
+                subtitle: "Most popular",
+                price: "$50/week",
+                features: ["Multi-location", "Automated alerts", "Priority support"],
+                highlight: true,
+              },
+              {
+                name: "Platinum",
+                subtitle: "Advanced control",
+                price: "$75/week",
+                features: ["Analytics dashboard", "Custom workflows", "Dedicated support"],
+                highlight: false,
+              },
+              {
+                name: "Ultra",
+                subtitle: "Enterprise-grade",
+                price: "$120/week",
+                features: ["Unlimited orders", "Premium automation", "24/7 support"],
+                highlight: false,
+              },
+            ].map((plan) => (
+              <Grid item xs={12} sm={6} md={3} key={plan.name}>
+                <Card
+                  sx={{
+                    borderRadius: "24px",
+                    overflow: "hidden",
+                    border: plan.highlight
+                      ? "2px solid #1976d2"
+                      : "1px solid rgba(25, 118, 210, 0.12)",
+                    background: "rgba(255,255,255,0.95)",
+                    boxShadow: plan.highlight
+                      ? "0 24px 60px rgba(25, 118, 210, 0.14)"
+                      : "0 18px 40px rgba(15, 34, 76, 0.08)",
+                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                    "&:hover": {
+                      transform: "translateY(-8px)",
+                      boxShadow: "0 28px 70px rgba(15, 34, 76, 0.12)",
+                    },
+                  }}
+                >
+                  <Box
+                    sx={{
+                      p: 4,
+                      background: plan.highlight
+                        ? "linear-gradient(135deg, #1976d2 0%, #1565c0 100%)"
+                        : "rgba(25, 118, 210, 0.08)",
+                      color: plan.highlight ? "white" : "#1976d2",
+                      textAlign: "center",
+                    }}
+                  >
+                    <Typography variant="overline" sx={{ fontWeight: 700, letterSpacing: 1.2 }}>
+                      {plan.name}
+                    </Typography>
+                    <Typography variant="h4" sx={{ fontWeight: 800, mt: 1, mb: 1 }}>
+                      {plan.price}
+                    </Typography>
+                    <Typography variant="body2" sx={{ opacity: 0.85 }}>
+                      {plan.subtitle}
+                    </Typography>
+                  </Box>
+                  <CardContent>
+                    <Stack spacing={1.5} sx={{ mb: 3 }}>
+                      {plan.features.map((featureText) => (
+                        <Box key={featureText} sx={{ display: "flex", gap: 1, alignItems: "flex-start" }}>
+                          <Box
+                            sx={{
+                              width: 8,
+                              height: 8,
+                              borderRadius: "50%",
+                              background: "#1976d2",
+                              mt: 0.9,
+                            }}
+                          />
+                          <Typography variant="body2" sx={{ color: "#555" }}>
+                            {featureText}
+                          </Typography>
+                        </Box>
+                      ))}
+                    </Stack>
+                    <Button
+                      component={RouterLink}
+                      to="/Register"
+                      variant={plan.highlight ? "contained" : "outlined"}
+                      fullWidth
+                      sx={{
+                        borderRadius: "999px",
+                        textTransform: "none",
+                        fontWeight: 700,
+                        px: 0,
+                        py: 1.3,
+                        ...(plan.highlight
+                          ? { background: "white", color: "#1976d2" }
+                          : { borderColor: "rgba(25, 118, 210, 0.35)", color: "#1976d2" }),
+                      }}
+                    >
+                      Select Plan
+                    </Button>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </Box>
+
+      {/* CTA Section */}
+      <Box
+        sx={{
+          padding: "80px 40px",
+          background: "linear-gradient(135deg, #1976d2 0%, #1565c0 100%)",
+          color: "white",
+          textAlign: "center",
+        }}
+      >
+        <Container maxWidth="md">
+          <Typography variant="h3" sx={{ fontWeight: 700, marginBottom: 2 }}>
+            Ready to Transform Your Warehouse?
+          </Typography>
+          <Typography variant="body1" sx={{ marginBottom: 4, fontSize: 16 }}>
+            Sign up today and get started with a free plan. No credit card required.
+          </Typography>
+          <Button
+            component={RouterLink}
+            to="/Features"
+            variant="contained"
+            sx={{
+              background: "white",
+              color: "#1976d2",
+              fontWeight: 600,
+              padding: "12px 32px",
+              fontSize: 15,
+              textTransform: "none",
+              "&:hover": { background: "#f0f0f0" },
+            }}
+          >
+            Learn More About Features
+          </Button>
+        </Container>
+      </Box>
+
+      {/* Footer */}
+      <Box
+        sx={{
+          background: "linear-gradient(135deg, #1a237e 0%, #283593 100%)",
+          color: "white",
+          padding: "60px 40px",
+        }}
+      >
+        <Container maxWidth="lg">
+          <Grid container spacing={4}>
+            <Grid item xs={12} sm={6} md={3}>
+              <Typography variant="h6" sx={{ fontWeight: 700, marginBottom: 2 }}>
+                Company
+              </Typography>
+              <Stack spacing={1}>
+                <Button color="inherit" sx={{ justifyContent: "flex-start" }}>
+                  About Us
+                </Button>
+                <Button color="inherit" sx={{ justifyContent: "flex-start" }}>
+                  Careers
+                </Button>
+                <Button color="inherit" sx={{ justifyContent: "flex-start" }}>
+                  Blog
+                </Button>
+              </Stack>
+            </Grid>
+
+            <Grid item xs={12} sm={6} md={3}>
+              <Typography variant="h6" sx={{ fontWeight: 700, marginBottom: 2 }}>
+                Support
+              </Typography>
+              <Stack spacing={1}>
+                <Button color="inherit" sx={{ justifyContent: "flex-start" }}>
+                  Help Center
+                </Button>
+                <Button color="inherit" sx={{ justifyContent: "flex-start" }}>
+                  FAQ
+                </Button>
+                <Button color="inherit" sx={{ justifyContent: "flex-start" }}>
+                  Feedback
+                </Button>
+              </Stack>
+            </Grid>
+
+            <Grid item xs={12} sm={6} md={3}>
+              <Typography variant="h6" sx={{ fontWeight: 700, marginBottom: 2 }}>
+                Legal
+              </Typography>
+              <Stack spacing={1}>
+                <Button color="inherit" sx={{ justifyContent: "flex-start" }}>
+                  Privacy Policy
+                </Button>
+                <Button color="inherit" sx={{ justifyContent: "flex-start" }}>
+                  Terms of Service
+                </Button>
+                <Button color="inherit" sx={{ justifyContent: "flex-start" }}>
+                  Cookies
+                </Button>
+              </Stack>
+            </Grid>
+
+            <Grid item xs={12} sm={6} md={3}>
+              <Typography variant="h6" sx={{ fontWeight: 700, marginBottom: 2 }}>
+                Follow Us
+              </Typography>
+              <Stack spacing={1}>
+                <Button color="inherit" sx={{ justifyContent: "flex-start" }}>
+                  Facebook
+                </Button>
+                <Button color="inherit" sx={{ justifyContent: "flex-start" }}>
+                  Twitter
+                </Button>
+                <Button color="inherit" sx={{ justifyContent: "flex-start" }}>
+                  Instagram
+                </Button>
+              </Stack>
+            </Grid>
+          </Grid>
+
+          <Box sx={{ borderTop: "1px solid rgba(255,255,255,0.2)", marginTop: 4, paddingTop: 3, textAlign: "center" }}>
+            <Typography variant="body2" sx={{ opacity: 0.9 }}>
+              © 2024 Daulatwal Godown. All rights reserved.
+            </Typography>
+          </Box>
+        </Container>
+      </Box>
+    </Box>
+  );
 }
 
 export default Landing;
+
