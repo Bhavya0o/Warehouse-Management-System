@@ -15,7 +15,7 @@ import Profile from "./Profile";
 import Chatbot from "./Chatbot";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Modern theme
+
 const theme = createTheme({
   palette: {
     primary: {
