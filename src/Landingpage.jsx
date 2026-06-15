@@ -257,7 +257,7 @@ function Landing() {
             {/* <button>buy</button> */}
 
 <button class="button-89" role="button">
- <Link to="/Plan">Buy</Link>
+ <Link to="/">Buy</Link>
 </button>
 
 
@@ -282,7 +282,7 @@ function Landing() {
 
             <div className="card_button">
 <button  class="button-89" role="button" type="submit">
- <Link to="/Plan">Buy</Link>
+ <Link to="/">Buy</Link>
 </button>
 
             </div>
@@ -307,7 +307,7 @@ function Landing() {
 
             <div className="card_button">
 <button   class="button-89" role="button"type="submit">
- <Link to="/Plan">Buy</Link>
+ <Link to="/">Buy</Link>
 </button>
 
             </div>
@@ -333,7 +333,7 @@ function Landing() {
 
             <div className="card_button">
 <button  class="button-89" role="button"type="submit" >
- <Link to="/Plan">Buy</Link>
+ <Link to="/">Buy</Link>
 </button>
 
             </div>
